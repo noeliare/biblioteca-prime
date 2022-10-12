@@ -25,4 +25,9 @@ export class LibrosService {
   put(libro:Libro): Observable<any>{
     return this.http.put(this.url, libro, {responseType: 'text'});
   }
+
+  delete(libro: Libro):Observable<any>{
+    return this.http.delete(`${this.url}/${libro.id}`, {responseType: 'text'});
+  }
 }
+
